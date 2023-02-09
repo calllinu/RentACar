@@ -1,0 +1,268 @@
+.login-header-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+
+  color: #19216c;
+}
+
+.login-blue-point {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+
+  color: skyblue;
+}
+
+.login-welcome {
+  padding-top: 80px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 49px;
+  line-height: 78px;
+
+  color: #19216c;
+}
+
+.car-lover {
+  position: absolute;
+  width: 808.63px;
+  height: 597.63px;
+  left: 610px;
+  top: 292px;
+}
+
+.vector3 {
+  position: absolute;
+  left: 0%;
+  right: 8.56%;
+  top: 0%;
+  bottom: 0%;
+
+  background: rgba(25, 33, 108, 0.69);
+  opacity: 0.18;
+}
+
+.checkbox {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px; /* or 167% */
+  display: flex;
+  align-items: center;
+
+  color: #9aa5b1;
+
+  padding-left: 5px;
+}
+
+.login {
+  padding-left: 165px;
+}
+
+.Forgot-password {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px; /* or 167% */
+  display: flex;
+  align-items: center;
+  text-align: right;
+  padding-left: -15px;
+
+  color: #9aa5b1;
+}
+
+.privacy {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px; /* or 167% */
+
+  padding-top: 81px;
+
+  color: #9aa5b1;
+}
+
+.copyright {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px; /* or 167% */
+  padding-left: 300px;
+  color: #9aa5b1;
+  padding-top: 81px;
+}
+
+.login-button {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 60px;
+  top: -17px;
+  color: #ffffff;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.login-border {
+  background: #044473;
+  border-radius: 5px;
+  width: 168px;
+  height: 46px;
+  padding-top: 35px;
+}
+.abc {
+  padding-top: 74px;
+}
+
+.register-button {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 60px;
+  top: 15px;
+
+  color: #19216c;
+}
+.register-border {
+  background: #ffffff;
+  border-radius: 5px;
+  width: 168px;
+  height: 46px;
+}
+
+.login-description {
+  padding-top: 32px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 29px;
+
+  color: #7b8794;
+}
+
+.login-text-input-filling {
+  padding-top: 60px;
+}
+
+.login-rectangle {
+  background: rgb(213, 233, 255);
+  width: 350px;
+  line-height: 70px;
+}
+
+.vector {
+  border-left: 4px solid #044473;
+}
+
+.vector2 {
+  border-bottom: 1px solid #eaebf0;
+}
+
+.padd-txt-left {
+  padding-left: 22px;
+}
+
+.input-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 12px;
+
+  color: #7b8794;
+}
+
+.input-text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 40px;
+
+  color: #044473;
+
+  /* secondary-turquoise */
+}
+
+.login-text-input-normal {
+  /* text-input_normal */
+
+  padding-top: 10px;
+}
+
+.car-lover {
+  position: absolute;
+  width: 808.63px;
+  height: 597.63px;
+  padding-left: 610px;
+  top: 292px;
+}
+
+.vector3 {
+  /* Vector */
+
+  padding-left: 0%;
+  right: 8.56%;
+  top: 0%;
+  bottom: 0%;
+
+  background: rgba(25, 33, 108, 0.69);
+  opacity: 0.18;
+}
+.login-button-text {
+  /* Log in */
+
+  height: 18px;
+  padding-left: 24px;
+  right: 24px;
+  top: 14px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.login-text-input-email {
+  padding-top: 13px;
+}
+
+.btn-padding {
+  padding-left: 0px;
+}
+
+.success-padd {
+  padding-top: 100px;
+}

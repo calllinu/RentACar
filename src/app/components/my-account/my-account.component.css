@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+@import url("https://fonts.googleapis.com/css?family=Helvetica:500,700");
+
+.user-profile {
+  /* width: 350px; */
+  background: #FFFFFF;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 25px;
+  border: 1px solid lightgrey;
+}
+
+.contact-info-card {
+  margin-top: 0px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.log-out-btn {
+  margin-top: 20px;
+}
+
+.user-name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #19216C;
+}
+
+.userCol {
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: column;
+}
+
+.user-functie {
+  display: flex;
+  justify-content: center;
+}
+
+.user-functie h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  color: #1CD4D4;
+  margin: 5px;
+}
+
+.contact-info-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 29px;
+  color: #19216C;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.info-details {
+  display: flex;
+  align-items: center;
+}
+
+.info-details img {
+  margin-right: 7px;
+}
+
+.info-details p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #9AA5B1;
+  margin: 0;
+}

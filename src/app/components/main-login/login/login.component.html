@@ -1,0 +1,100 @@
+<div class="container login">
+  <div class="col">
+    <div class="row login-header-title">
+      Rent a Car
+      <div class="login-blue-point">
+        .
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="row login-welcome">
+        Welcome to Rent a Car
+      </div>
+      <div class="row login-description">
+        Noi iti usuram viata prin a-ti oferi o gama larga de automobile de
+        inchiriat.
+      </div>
+      <div class="row">
+        <div class="login-text-input-filling">
+          <div class="login-rectangle vector2">
+            <div class="padd-txt-left">
+              <mat-form-field class="exemple-container test">
+                <input
+                  matInput
+                  placeholder="Email Adress"
+                  (change)="onKeyEmail($event)"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="login-text-input-normal">
+          <div class="login-rectangle vector2">
+            <div class="padd-txt-left">
+              <mat-form-field class="exemple-container test">
+                <input
+                  matInput
+                  placeholder="Password"
+                  (change)="onKeyPassword($event)"
+                  type="password"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row checkbox">
+        <div class="col">
+          <div>
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="defaultUnchecked"
+              (click)="checkRemeber($event)"
+              checked="{{ this.ischecked }}"
+            />
+            <label class="custom-control-label" for="defaultUnchecked"
+              >Remember me</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row abc">
+        <!-- <div class ="abc"> -->
+        <div class="col btn-padding">
+          <div class="login-border">
+            <div class="login-button">
+              <button class="login-button" (click)="loginUser()">Logare</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="register-border">
+            <div class="register-button">
+              <a href="signup">Inregistarare</a>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="wrong">
+        <div class="row alert alert-danger" role="alert" *ngIf="alertError">
+          Datele introduse sunt incorecte! Incercati din nou !
+          <a href="login"></a>
+        </div>
+        <div class="success">
+          <div class="row alert alert-success" role="alert" *ngIf="succValue">
+            V-ati logat cu succes !
+            <br />
+            Veti fi redirectionat catre pagina !
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

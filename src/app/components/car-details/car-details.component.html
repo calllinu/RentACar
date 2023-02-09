@@ -1,0 +1,201 @@
+<div *ngIf="car" class="container">
+  <div class="main_info_container">
+    <small
+      ><a href="/dashboard">Acasa</a> > <a href="/my-cars">Masini</a> >
+      {{ car.marca }}</small
+    >
+
+    <div class="row info_row">
+      <div class="col-4">
+        <img
+          *ngIf="car.picture"
+          src="{{ car.picture }}"
+          alt=""
+          height="100%"
+          width="100%"
+        />
+        <img
+          *ngIf="!car.picture"
+          src="assets/car_cover.png"
+          alt=""
+          height="100%"
+          width="100%"
+        />
+      </div>
+
+      <div class="col-6 description_col">
+        <h4 class="card-title px-2">{{ car.marca }} {{ car.model }}</h4>
+        <p class="card-author">{{ car.categorie }}</p>
+        <p class="card-text">{{ car.descriere }}</p>
+
+        <div class="btn-group px-2" role="group" aria-label="Basic example">
+          <div *ngIf="car.is_borrowed == 'false'">
+            <button
+              (click)="borrowCar()"
+              class="btn btn-primary borrowButton mr-2"
+              *ngIf="user && user.userRole == 'admin'"
+            >
+              Inchiriaza
+            </button>
+          </div>
+          <div *ngIf="car.is_borrowed == 'true'">
+            <button
+              *ngIf="user && user.userRole == 'admin'"
+              type="button"
+              class="btn btn-primary borrowButton"
+              data-toggle="modal"
+              data-target="#return_car"
+            >
+              Returneaza
+            </button>
+
+            <p
+              class="pt-2"
+              style="color: white;"
+              [ngClass]="{ borrowButton: user && user.userRole == 'user' }"
+            >
+              Nu este valabila!
+            </p>
+
+            <div class="modal fade" id="return_car" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                      &times;
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="textModal">
+                      Esti sigur ca vrei sa returnezi masina ?
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-default"
+                      data-dismiss="modal"
+                    >
+                      Anulare
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-succeful"
+                      data-dismiss="modal"
+                      (click)="returnCar()"
+                    >
+                      Returneaza
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="user.userRole == 'admin'">
+            <button (click)="editCar()" class="btn btn-primary editButton ml-3">
+              Editeaza
+            </button>
+          </div>
+          <div *ngIf="user.userRole == 'admin' && car.is_borrowed == 'false'">
+            <button
+              class="btn btn-primary deleteButton ml-3"
+              data-target="#delete_car"
+              type="button"
+              data-toggle="modal"
+              data-target="#delete_car"
+            >
+              Sterge
+            </button>
+            <div class="modal fade" id="delete_car" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                      &times;
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="textModal">
+                      Esti sigur ca vrei sa stergo aceasta masina?
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-default"
+                      data-dismiss="modal"
+                    >
+                      Anulare
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      data-dismiss="modal"
+                      (click)="deleteCar()"
+                    >
+                      Stergere
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="car" class="description_container">
+  <div class="container">
+    <div class="menu">
+      <ul>
+        <li><a (click)="Change_to_desc()">Descriere</a></li>
+        <li><a (click)="Change_to_rec()">Recomandari (21)</a></li>
+      </ul>
+    </div>
+    <hr />
+
+    <div *ngIf="descr == 1; else recommendation">
+      <div class="car-description col-10">
+        <p>{{ car.descriere }}</p>
+        <p id="car-details" class="pt-4">Pret: {{ car.pret }}</p>
+        <p id="car-details">KM Parscursi: {{ car.km }}</p>
+      </div>
+
+      <div class="tags">
+        <ul id="tag-list">
+          <li>
+            <h5>
+              <i class="fa fa-circle pr-2" aria-hidden="true"></i>BUSINESS
+            </h5>
+          </li>
+          <li>
+            <h5><i class="fa fa-circle pr-2" aria-hidden="true"></i>ECONOM</h5>
+          </li>
+          <li>
+            <h5><i class="fa fa-circle pr-2" aria-hidden="true"></i>MONEY</h5>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <ng-template #recommendation>
+      <div class="col-sm-6">
+        <textarea
+          id="comment"
+          placeholder="Ce crezi despre experienta cu aceasta masina?"
+        ></textarea>
+        <div class="text-right py-2 pb-5">
+          <button id="btnsend" class="btn btn-secondary ">Send</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <app-recommendations
+          *ngFor="let a of [1, 2, 3, 4]"
+        ></app-recommendations>
+      </div>
+    </ng-template>
+  </div>
+</div>

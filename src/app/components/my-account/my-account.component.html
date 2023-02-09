@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5 userCol mx-auto" style="text-align: center">
+      <div class="user-profile">
+          <img src="https://image.flaticon.com/icons/svg/61/61205.svg" width="136px" height="136px" alt="">
+          <div class="user-name">
+            <h1>{{ this.loggedUserProfile.fullName }}</h1>
+            <div class="user-functie">
+              <h2>User Role :</h2>
+              <h2 style="text-transform: uppercase;">{{ this.loggedUserProfile.userRole }}</h2>
+            </div>
+          </div>
+      </div>
+      <div class="user-profile contact-info-card">
+          <p class="contact-info-title">Contact Info</p>
+          <div class="info-details">
+            <img src="assets/envelope-alt.png" alt="" class="emailImage" width="20px" height="14px">
+            <p class="email">{{ this.loggedUserProfile.email }}</p>
+          </div>
+          <button class="btn btn-danger log-out-btn" (click)="logOut()">Log Out</button>
+      </div>
+    </div>
+  </div>
+</div>

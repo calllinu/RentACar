@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="Buton">
+    <div class="Add-Car" (click)="goTo()">Adaugare masina</div>
+  </div>
+
+  <div class="Cars">
+    <div class="Burrowed-Cars">Masini inchiriate</div>
+  </div>
+  <div class="w-100>"></div>
+
+  <div class="row regular-row">
+    <div class="col "></div>
+    <div class="col">Marca</div>
+    <div class="col">Model</div>
+    <div class="col">Start Date</div>
+    <div class="col">Due Date</div>
+    <div class="col">Persoana</div>
+  </div>
+
+  <div class="row regular-row-1" *ngFor="let car of borrowedCars">
+    <div class="col" style="cursor: pointer" (click)="goToDetails(car.key)">
+      <img
+        *ngIf="!car.picture"
+        src="assets/car_cover.png"
+        width="52px"
+        height="66px"
+      />
+      <img
+        *ngIf="car.picture"
+        src="{{ car.picture }}"
+        width="52px"
+        height="66px"
+      />
+    </div>
+    <div class="col alignText">{{ car.marca }}</div>
+    <div class="col alignText">{{ car.model }}</div>
+    <div class="col alignText">{{ car.initialDate }}</div>
+    <div class="col alignText">{{ car.dueDate }}</div>
+    <div class="col alignText">{{ car.userFullName }}</div>
+  </div>
+
+  <div class="Overdue">Intarziate</div>
+  <div class="w-100>"></div>
+  <div class="row regular-row">
+    <div class="col"></div>
+    <div class="col">Marca</div>
+    <div class="col">Model</div>
+    <div class="col">Start Date</div>
+    <div class="col">Due Date</div>
+    <div class="col">Persoana</div>
+  </div>
+
+  <div class="row regular-row-1" *ngFor="let car of overdueCars">
+    <div class="col" style="cursor: pointer" (click)="goToDetails(car.key)">
+      <img src="assets/car_cover.png" width="52px" height="66px" />
+    </div>
+    <div class="col alignText">{{ car.marca }}</div>
+    <div class="col alignText">{{ car.model }}</div>
+    <div class="col alignText">{{ car.initialDate }}</div>
+    <div class="col alignText">{{ car.dueDate }}</div>
+    <div class="col alignText">{{ car.userFullName }}</div>
+  </div>
+</div>

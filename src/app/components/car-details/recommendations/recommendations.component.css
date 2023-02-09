@@ -1,0 +1,19 @@
+.name{
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 11px;
+  /* or 61% */
+  color: #19216C;
+}
+.time{
+  color: #A8A8C3;
+}
+.card{
+  background: #F5F7FA;
+  border: none;
+}
+.col_descr{
+  width: 300px;
+}

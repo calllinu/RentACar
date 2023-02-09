@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+@import url("https://fonts.googleapis.com/css?family=Helvetica:500,700");
+.mat1 {
+  padding: 0;
+  width: 100%;
+}
+
+.mat-radio-button {
+  margin-left: 16px;
+  color: blue;
+}
+
+.test {
+  width: 100%;
+  font-family: Montserrat;
+  color: #7b8794;
+}
+
+.mat-form-field-wrapper {
+  position: relative;
+  width: 330px;
+}
+
+.inputFile {
+  margin-left: 25px;
+}
+
+.col-6 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.container {
+  width: 920px;
+  height: 750px;
+  left: 260px;
+  top: 192px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.header {
+  border-bottom: 1px solid #f5f7fa;
+  margin-bottom: 51px;
+}
+
+.title_form {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0;
+  font-size: 24px;
+  line-height: 29px;
+  margin-left: 40px;
+  padding-top: 37px;
+  padding-bottom: 34px;
+  color: #9aa5b1;
+}
+
+.form-control {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 24px;
+  margin-right: 20px;
+  border: 0;
+  border-bottom: 1px solid #eaebf0;
+}
+
+.description {
+  margin-right: 6px;
+  margin-left: 5px;
+}
+
+::-webkit-input-placeholder {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  text-align: left;
+  padding-left: 23px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  color: #7b8794;
+}
+
+.radio-item {
+  display: inline-block;
+  position: relative;
+  padding: 0 8px;
+  margin-left: 25px;
+  margin-top: 28px;
+}
+
+.radio-item input[type="radio"] {
+  display: none;
+}
+
+.radio-item label {
+  color: #7b8794;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.radio-item label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  margin: 0 17px 0 0;
+  width: 16px;
+  height: 16px;
+  left: -0.5px;
+  border-radius: 10.7px;
+  border: 2px solid #19216c;
+  background-color: transparent;
+}
+
+.radio-item input[type="radio"]:checked + label:after {
+  border-radius: 11px;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  position: absolute;
+  top: 5.5px;
+  left: 10.8px;
+  content: " ";
+  display: block;
+  background: #19216c;
+}
+
+#ritema {
+  left: 11.2px;
+}
+
+.radio-buttons {
+  left: 11.2px;
+}
+
+#mainselection select {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  text-align: left;
+  padding-left: 23px;
+  color: #7b8794;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 8px;
+  margin-top: 32px;
+  background-color: #f5f7fa;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 42px;
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+
+.submit {
+  background: #044473;
+  border-radius: 5px;
+  margin-left: 8px;
+  color: #ffffff;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: none;
+  font: inherit;
+}
+
+.cancel {
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-right: 8px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font: inherit;
+}
+
+.buttonsCancel {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 18px;
+  left: 24px;
+  right: 24px;
+  top: 14px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #c4c4c4;
+}
+
+.buttonsSubmit {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 18px;
+  left: 24px;
+  right: 24px;
+  top: 14px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hide {
+  display: none;
+}
+.cursor :hover {
+  cursor: pointer;
+}

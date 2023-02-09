@@ -1,0 +1,55 @@
+.navbar {
+  background: #1a0221;
+  height: 107px;
+}
+
+.navbar h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.dot {
+  color: #044473;
+}
+
+.navMenu {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.navBrowse span {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+
+  color: #ffffff;
+}
+
+.menuBars {
+  color: white;
+}
+
+.menuLink {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+}
+
+.mb-1,
+.my-1 {
+  margin-bottom: 0rem !important;
+}
+
+.nav-flex-icons {
+  align-items: center;
+}
+
+.dropdown-toggle::after {
+  vertical-align: 0 !important;
+}

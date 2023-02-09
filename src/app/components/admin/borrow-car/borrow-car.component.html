@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="header">
+    <h1 class="title_form">Inchiriaza masina</h1>
+  </div>
+
+  <div *ngIf="isBorrowed === true">
+    <p>
+      Aceasta masina este inchiriata!
+    </p>
+  </div>
+  <div *ngIf="isBorrowed === false">
+    <form #form="ngForm" (ngSubmit)="onSubmit(borrowcarForm.value)">
+      <mat-form-field class="mat1 test">
+        <input
+          [(ngModel)]="marca"
+          matInput
+          placeholder="Marca"
+          name="marca"
+          disabled
+        />
+      </mat-form-field>
+      <br />
+      <mat-form-field class="mat1 test">
+        <input
+          [(ngModel)]="model"
+          matInput
+          placeholder="Model"
+          name="model"
+          disabled
+        />
+      </mat-form-field>
+      <br />
+      <mat-form-field class="mat1 test">
+        <input
+          [(ngModel)]="descriere"
+          matInput
+          placeholder="Descriere"
+          name="descriere"
+          disabled
+        />
+      </mat-form-field>
+      <br />
+      <mat-form-field class="mat1 test">
+        <input
+          required
+          type="text"
+          placeholder="Inchiriaza pentru"
+          matInput
+          [matAutocomplete]="auto"
+          (input)="filter($event.target)"
+        />
+        <mat-autocomplete
+          #auto="matAutocomplete"
+          [displayWith]="displayFn"
+          (optionSelected)="getOption($event.option.value)"
+        >
+          <mat-option *ngFor="let option of filteredOptions" [value]="option">
+            {{ option.fullName }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <br />
+      <mat-form-field class="mat1 test">
+        <input
+          matInput
+          [(ngModel)]="initialDate"
+          [matDatepicker]="piker1"
+          placeholder="Data inchiriere"
+          name="initialDate"
+          required
+        />
+        <mat-datepicker-toggle matSuffix [for]="piker1"></mat-datepicker-toggle>
+        <mat-datepicker #piker1></mat-datepicker>
+      </mat-form-field>
+      <br />
+      <mat-form-field class="mat1 test">
+        <input
+          matInput
+          [(ngModel)]="dueDate"
+          [matDatepicker]="piker2"
+          placeholder="Pana la data"
+          name="dueDate"
+          required
+        />
+        <mat-datepicker-toggle matSuffix [for]="piker2"></mat-datepicker-toggle>
+        <mat-datepicker #piker2></mat-datepicker>
+      </mat-form-field>
+
+      <p *ngIf="isSuccessful === true" class="text">
+        The car was borrowed!
+      </p>
+
+      <div class="footer">
+        <div class="buttons">
+          <button type="submit" class="btn submit">
+            <div class="buttonsSubmit">Inchiriaza</div>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

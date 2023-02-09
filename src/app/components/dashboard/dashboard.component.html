@@ -1,0 +1,41 @@
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>Cauta o masina pe placul tau.</h1>
+      <div class="input-icon-wrap searchBox">
+        <span class="input-icon"><span class="fa fa-search"></span></span>
+        <input
+          (input)="filterCars($event.target.value)"
+          type="text"
+          class="input-with-icon"
+          id="form-name"
+          placeholder="Cauta dupa Marca sau Model..."
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="container carContainer">
+    <div class="row">
+      <app-dashboard-car
+        *ngFor="let car of filteredCars | slice: 0:nr"
+        [inputCar]="car"
+        [user]="user"
+        class="col-6 carRow"
+      ></app-dashboard-car>
+    </div>
+
+    <div>
+      <div class="loadButton">
+        <button
+          *ngIf="filteredCars && nr != count && filteredCars.length > 10"
+          id="loadMore"
+          class="btn btn-primary"
+          (click)="loadMore()"
+        >
+          Incarca mai multe
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,109 @@
+<div class="container">
+  <div class="header">
+    <h1 class="title_form">Add Car</h1>
+  </div>
+
+  <form (ngSubmit)="onSubmit(addCarForm.value)" #form="ngForm">
+    <div class="form-row">
+      <div class="form-group col-6">
+        <mat-form-field class="exemple-container test">
+          <input
+            [(ngModel)]="marca"
+            matInput
+            placeholder="Marca"
+            name="marca"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="form-group col-6">
+        <mat-form-field class="exemple-container test">
+          <input
+            [(ngModel)]="model"
+            matInput
+            placeholder="Model"
+            name="model"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-6">
+        <mat-form-field class="exemple-container test">
+          <input [(ngModel)]="km" matInput placeholder="km" name="km" />
+        </mat-form-field>
+      </div>
+      <div class="form-group col-6">
+        <mat-form-field class="exemple-container test">
+          <input
+            [(ngModel)]="pret"
+            type="number"
+            matInput
+            placeholder="Pret"
+            name="pret"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+    <div id="mainselection">
+      <div class="form-row">
+        <div class="form-group col-6">
+          <mat-form-field class="exemple-container test">
+            <mat-select
+              [(ngModel)]="categorie"
+              placeholder="Categorie"
+              name="categorie"
+            >
+              <mat-option value="business">Business</mat-option>
+              <mat-option value="standart">Standart</mat-option>
+              <mat-option value="econom">Econom</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="form-group col-6">
+          <mat-form-field class="exemple-container test">
+            <mat-select
+              [(ngModel)]="is_borrowed"
+              placeholder="Disponibila"
+              name="is_borrowed"
+              disabled
+            >
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="form-group description">
+      <mat-form-field class="test">
+        <input
+          [(ngModel)]="descriere"
+          matInput
+          id="inputDescription"
+          placeholder="Descriere"
+          name="descriere"
+        />
+      </mat-form-field>
+    </div>
+
+    <p>
+      <input type="file" (change)="upload($event)" accept=".png,.jpg" />
+    </p>
+
+    <div *ngIf="isSucceful == true">
+      <p class="alert alert-success" role="alert">
+        Masina a fost adaugata cu succes
+      </p>
+    </div>
+
+    <div class="footer">
+      <div class="buttons cursor ">
+        <button type="cancel" class="btn cancel" (click)="redirect()">
+          <div class="buttonsCancel">Renunta</div>
+        </button>
+        <button type="submit" class="btn submit ">
+          <div class="buttonsSubmit">Adauga masina</div>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

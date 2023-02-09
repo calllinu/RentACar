@@ -1,0 +1,206 @@
+.containter {
+  position: relative;
+  width: 1440px;
+  height: 1804px;
+  background: #ffffff;
+}
+
+.Buton {
+  padding-top: 14px;
+  margin-left: 928px;
+  padding-right: 24px;
+  padding-left: 46px;
+  padding-bottom: 14px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #044473;
+  border-radius: 5px;
+  width: 168px;
+  height: 46px;
+}
+
+.Buton > .Add-Car {
+  height: 14px;
+  left: 24px;
+  right: 24px;
+  top: 14px;
+  width: 120px;
+  height: 18px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+.Buton :hover {
+  cursor: pointer;
+}
+.w-100 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Cars {
+  width: 255px;
+  height: 46px;
+  left: 165px;
+  top: 302px;
+  margin-bottom: 24px;
+  border-radius: 5px;
+  color: #9aa5b1;
+  padding-top: 12px;
+  padding-left: 20px;
+  padding-right: 18px;
+  padding-bottom: 12px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 11px;
+  display: flex;
+  align-items: center;
+}
+
+.Cars > .Borrowed-Cars {
+  color: #9aa5b1;
+}
+
+.Overdue {
+  color: red !important;
+  width: 315px;
+  height: 46px;
+  left: 168px;
+  right: 957px;
+  top: 872px;
+  padding-top: 92px;
+  padding-bottom: 24px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 11px;
+  /* or 46% */
+  display: flex;
+  align-items: center;
+  color: #9aa5b1;
+}
+
+.row {
+  padding-top: 13px;
+  padding-bottom: 12px;
+  width: 1110px;
+  height: 90px;
+  left: 168px;
+  top: 372px;
+  text-align: center;
+  background: #f5f7fa;
+  border-radius: 5px;
+}
+
+regular-row {
+  width: 1110px;
+  height: 90px;
+  left: 168px;
+  top: 420px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+.row regular-row-1 > .img {
+  position: absolute;
+  left: 13.75%;
+  right: 82.71%;
+  top: 23.95%;
+  bottom: 72.39%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 30px;
+  padding-right: 1029px;
+  border-radius: 5px;
+}
+
+.row regular-row-1 > .X1 {
+  width: 157px;
+  height: 48px;
+  left: 358px;
+  top: 441px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-left: 190;
+  padding-right: 763px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  color: #9aa5b1;
+}
+
+.col > .Title {
+  width: 157px;
+  height: 48px;
+  left: 358px;
+  top: 942px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 11px;
+  /* or 110% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9aa5b1;
+}
+
+.Footer {
+  position: absolute;
+  width: 1440px;
+  height: 95px;
+  left: 0px;
+  top: 1709px;
+  padding-top: 179px;
+  background: #ffffff;
+}
+
+div.h1 {
+  width: 127px;
+  height: 30px;
+  left: 164px;
+  top: 1742px;
+  padding-top: 33px;
+  padding-bottom: 43px;
+  padding-left: 164px;
+  padding-right: 1149px;
+}
+
+p {
+  padding-top: 39px;
+  padding-bottom: 38px;
+  width: 247px;
+  height: 50px;
+  padding-left: 1028px;
+  padding-right: 165px;
+  top: 1740px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #9aa5b1;
+}
+.alignText {
+  display: flex;
+  align-items: center;
+}

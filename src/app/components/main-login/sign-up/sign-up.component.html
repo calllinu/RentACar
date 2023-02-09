@@ -1,0 +1,116 @@
+<div class="container login">
+  <div class="col">
+    <div class="row login-header-title">
+      Rent a Car
+      <div class="login-blue-point">
+        .
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col success-padd" *ngIf="succValue">
+      <div class="row alert alert-success" role="alert" *ngIf="succValue">
+        Te-ai inregistrat cu succes
+      </div>
+
+      <div class="row btn-padding ">
+        <div class="register-border">
+          <div class="register-button">
+            <a href="login"> Logare</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col" *ngIf="!succValue">
+      <div class="row login-welcome">
+        Creeaza un cont nou
+      </div>
+      <div class="row login-description">
+        Noi iti usuram viata prin a-ti oferi o gama larga de automobile de
+        inchiriat.
+      </div>
+      <div class="row">
+        <div class="login-text-input-filling">
+          <div class="login-rectangle vector2">
+            <div class="padd-txt-left">
+              <mat-form-field class="exemple-container test">
+                <input
+                  matInput
+                  placeholder="Nume complet"
+                  (keyup)="onKeyFullName($event)"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="login-text-input-email">
+          <div class="login-rectangle vector2">
+            <div class="padd-txt-left">
+              <mat-form-field class="exemple-container test">
+                <input
+                  matInput
+                  placeholder="Email Adress"
+                  (keyup)="onKeyEmail($event)"
+                />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="login-text-input-normal">
+          <div class="login-rectangle vector2">
+            <div class="padd-txt-left">
+              <mat-form-field class="exemple-container test">
+                <input
+                  matInput
+                  placeholder="Parola"
+                  (keyup)="onKeyPassword($event)"
+                  type="password"
+                  minlength="8"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row checkbox">
+        <div class="col">
+          <br />
+          <div class="Forgot-password">
+            Ai deja un cont? <a href="login">Logare</a>
+          </div>
+        </div>
+      </div>
+      <div class="row alert alert-danger" role="alert" *ngIf="alertError">
+        {{ errMessage }} <a href="login"> Login!</a>
+      </div>
+      <div class="row alert alert-danger" role="alert" *ngIf="passNrVal">
+        Parola trebuie sa contina minim 8 caractere!
+      </div>
+
+      <div class="row abc">
+        <div class="col btn-padding ">
+          <div class="register-border">
+            <div class="register-button">
+              <a href="login"> < Back</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="login-border">
+            <button
+              class="login-button"
+              (click)="createUserWithEmailAndPassword()"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,138 @@
+p {
+  margin-bottom: 0 !important;
+}
+
+.card {
+  max-height: 300px;
+}
+
+.col-6 {
+  padding-left: 0px !important;
+}
+
+.carRow {
+  background-color: white;
+  min-width: 332px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  display: flex;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+
+  color: #19216c;
+}
+
+.card-text {
+  padding-left: 10px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+
+  color: #9aa5b1;
+}
+
+.car_borrow {
+  background: #044473;
+  border-radius: 4px;
+}
+
+.borrowButton {
+  height: 36px;
+  width: 131px;
+  background: #044473;
+  border-color: #044473;
+  border-radius: 4px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+}
+
+.previewButton {
+  height: 36px;
+  width: 131px;
+
+  background: #ffffff;
+  border-color: #044473;
+  border-radius: 4px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+
+  color: #044473;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f5f7fa;
+  border: 0 none;
+}
+
+.return {
+  padding-left: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+
+  color: #a8a8c3;
+}
+
+.returnDate {
+  padding-left: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+
+  color: #19216c;
+}
+
+.viewReturn {
+  line-height: 17px;
+}
+
+.fa {
+  color: #cbd2d9;
+}
+
+.cardFooter p {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 19px;
+
+  color: #cbd2d9;
+}
+
+.card-block {
+  padding-top: 32px;
+}
+
+.btn-group {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}

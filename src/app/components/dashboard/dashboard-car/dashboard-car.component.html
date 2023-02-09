@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-md-">
+    <img
+      *ngIf="inputCar.picture"
+      src="{{ inputCar.picture }}"
+      alt=""
+      height="297"
+      width="209"
+    />
+    <img
+      *ngIf="!inputCar.picture"
+      src="assets/car_cover.png"
+      alt=""
+      height="297"
+      width="209"
+    />
+  </div>
+
+  <div class="px-3 col-6 carRow">
+    <div>
+      <h4 class="card-title pl-3 pt-3">
+        {{ inputCar.marca }} {{ inputCar.model }}
+      </h4>
+      <p class="card-text pl-3">{{ inputCar.descriere | limitTo: 140 }}</p>
+
+      <div class="btn-group pl-3" role="group" aria-label="Basic example">
+        <button
+          (click)="onSelectBorrow()"
+          *ngIf="
+            inputCar.is_borrowed == 'false' && user && user.userRole == 'admin'
+          "
+          class="btn btn-primary borrowButton mr-3"
+        >
+          Inchiriaza
+        </button>
+        <button
+          (click)="onSelect()"
+          class="btn btn-primary previewButton"
+          [ngClass]="{ borrowButton: inputCar.is_borrowed }"
+        >
+          Vizualizare
+        </button>
+        <div *ngIf="inputCar.is_borrowed == 'true'" class="viewReturn">
+          <p class="return">Return due date</p>
+          <p class="returnDate">{{ dueDate }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pb-3">
+      <hr />
+
+      <div class="row pl-4">
+        <div class="cardFooter col-md-">
+          <p>
+            <i class="fa fa-bookmark-o fa-0.5x pr-1"></i> Pret
+            {{ inputCar.pret }} $
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="card flex-row flex-wrap mb-4">
+  <div class="col-md-">
+    <img src="assets/car_cover.png" alt="" height="142" width="97" />
+  </div>
+
+  <div class="card-block px-4 col-6">
+    <h4 class="card-title px-2 pt-2">{{ inputCar.marca }}</h4>
+    <small class="pl-2">{{ inputCar.model }} • {{ inputCar.categorie }}</small>
+    <p class="card-text mt-4">{{ inputCar.descriere | limitTo: 150 }}</p>
+  </div>
+
+  <div class="col-md-4 py-5">
+    <button (click)="onSelect()" class="btn btnView ">Vezi masina</button>
+  </div>
+</div>

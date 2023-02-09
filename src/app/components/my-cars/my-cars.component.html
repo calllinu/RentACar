@@ -1,0 +1,40 @@
+<body>
+  <div class="container">
+    <div class="text-right pb-4">
+      <span class="sortby px-3">Sorteaza dupa </span>
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Ultimile inchiriate
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item py-2">Ultimile inchiriate</a>
+        <a class="dropdown-item py-2" href="#">A to Z</a>
+        <a class="dropdown-item py-2" href="#">Z to A</a>
+        <a class="dropdown-item py-2" href="#">Data de inchiriere</a>
+      </div>
+    </div>
+
+    <app-car *ngFor="let car of cars | slice: 0:nr" [inputCar]="car"> </app-car>
+  </div>
+
+  <div class="no_borrowed text-center">
+    <p *ngIf="cars.length == 0">Nu sunt masini inchiriate</p>
+  </div>
+
+  <div class="loadButton">
+    <button
+      *ngIf="cars.length > 10"
+      id="loadMore"
+      class="btn btn-primary"
+      (click)="loadMore()"
+    >
+      Incarca mai mult
+    </button>
+  </div>
+</body>
